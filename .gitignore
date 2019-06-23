@@ -349,11 +349,11 @@ healthchecksdb
 /obj/*
 /Properties/*
 /bin/Release/*
-/bin/Debug/Another Images*
-/bin/Debug/Data*
-/bin/Debug/Localizations/Localization.loc/*
+/bin/Debug/Another Images/*
+/bin/Debug/Data/*
+/bin/Debug/Localizations/Localization.loc
 /bin/Debug/Panoramas/*
-/bin/Debug/Textures
+/bin/Debug/Textures/*
 /bin/Debug/PanoramaViewer.exe.config
 /bin/Debug/PanoramaViewer.pdb
 /bin/Debug/PanoramaViewer.exe
