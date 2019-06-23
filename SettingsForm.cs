@@ -121,7 +121,7 @@ namespace PanoramaViewer
 
         private void GitButton_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/AlexPi314/Panorama-Viewer");
+            Process.Start("https://github.com/AlexPi314/PanoramaViewer");
         }
     }
 }
