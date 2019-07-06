@@ -1,0 +1,6 @@
+Advanced settings
+Show panorama name
+Camera inertia
+Image settings
+Stretch image
+Program language

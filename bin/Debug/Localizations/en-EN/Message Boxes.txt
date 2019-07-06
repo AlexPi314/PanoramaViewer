@@ -1,0 +1,6 @@
+Error!
+The panoramma you are trying to oppen is small. Please, try to open another on turn-on the option "Stretch image" in menu "Settings".
+Information about Panorama Viewer
+Panorama Viewer\n \nThis program is written by the C# programming language in 2019.\nVersion - 1.0\n \nPanorama Viewer - a program for viewing panoramas of resolution equal to or greater than 3600x1800 pixels (If you wish, this option can be removed in the "Settings" menu) The project is Open Source, which means anyone can offer and implement the idea in the program and commit its update, and maybe it will appear in the next official one.\n \n!!! ATTENTION !!!\n \nWhen you openning large images, you may have a lot of stress on the processor. Do not open images more than 5000x2500 pixels.\n \nAll rights reserved!\n© Nikita Frolov (2019)\n \nIcons made by https://www.freepik.com/
+Attention!
+Changing the language requires restarting the program.
