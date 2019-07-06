@@ -42,6 +42,8 @@ namespace PanoramaViewer
 
             LangLabel.Text = Program.LocaleLabelsSF[5];
 
+            GHButtonToolTip.SetToolTip(GitButton, Program.LocaleLabelsSF[6]);
+
             for (int i = 0; i < Directory.GetDirectories(@"Localizations").Length; i++)
             {
                 if (File.Exists(@"Localizations\"+ Directory.GetDirectories(@"Localizations")[i].Remove(0, 14) + @"\Info.info"))

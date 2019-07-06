@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.NamePanoramaShowButton = new System.Windows.Forms.Button();
             this.ShowPanoramaNameLabel = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.LangLabel = new System.Windows.Forms.Label();
             this.LangComboBox = new System.Windows.Forms.ComboBox();
             this.GitButton = new System.Windows.Forms.Button();
+            this.GHButtonToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // NamePanoramaShowButton
@@ -153,6 +155,7 @@
             this.GitButton.Name = "GitButton";
             this.GitButton.Size = new System.Drawing.Size(37, 37);
             this.GitButton.TabIndex = 10;
+            this.GHButtonToolTip.SetToolTip(this.GitButton, "Наш GitHub");
             this.GitButton.UseVisualStyleBackColor = true;
             this.GitButton.Click += new System.EventHandler(this.GitButton_Click);
             // 
@@ -196,5 +199,6 @@
         private System.Windows.Forms.Label LangLabel;
         private System.Windows.Forms.ComboBox LangComboBox;
         private System.Windows.Forms.Button GitButton;
+        private System.Windows.Forms.ToolTip GHButtonToolTip;
     }
 }
