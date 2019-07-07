@@ -19,6 +19,7 @@ namespace PanoramaViewer
         {
             InitializeComponent();
 
+            //Присваивание цвета кнопок на основе прочитаных данных из файла настроек (Settings.data)
             if (Convert.ToBoolean(File.ReadAllLines(@"Data\Settings.data")[0].Remove(0, 10)) == true)
             {
                 NamePanoramaShowButton.BackColor = Color.YellowGreen;
@@ -32,6 +33,7 @@ namespace PanoramaViewer
                 BigImageButton.BackColor = Color.YellowGreen;
             }
 
+            //Локализация названий 
             Text = Program.LocaleWindowsNames[1];
 
             AdvancedOptionsLabel.Text = Program.LocaleLabelsSF[0];
@@ -44,6 +46,7 @@ namespace PanoramaViewer
 
             GHButtonToolTip.SetToolTip(GitButton, Program.LocaleLabelsSF[6]);
 
+            //Добавление языком в ComboBox
             for (int i = 0; i < Directory.GetDirectories(@"Localizations").Length; i++)
             {
                 if (File.Exists(@"Localizations\"+ Directory.GetDirectories(@"Localizations")[i].Remove(0, 14) + @"\Info.info"))
@@ -107,7 +110,9 @@ namespace PanoramaViewer
 
         private void LangComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Данные локализации записываються в файл
             File.WriteAllText(@"Localizations\Localization.loc", Convert.ToString(LangComboBox.SelectedItem).Replace(" ", string.Empty).Remove(0, Convert.ToString(LangComboBox.SelectedItem).IndexOf("|")) + "\n1");
+            //Диалоговое окно, которое позваляет пользователю перезагрузить или остаться в программе
             DialogResult result = MessageBox.Show(Program.LocaleMessageBoxes[5], Program.LocaleMessageBoxes[4], MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Retry)
@@ -118,11 +123,13 @@ namespace PanoramaViewer
 
         private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            //Данные насроек записываються в файл
             File.WriteAllText(@"Data\Settings.data", "PnrName - "+ Program.ShowPanoramaName +"\nInertia - "+ Program.SmoothCamera +"\nReszImg - " + Program.ResizeImage);
         }
 
         private void GitButton_Click(object sender, EventArgs e)
         {
+            //Переход на ссылку GitHub'а программы PanoramaViewer
             Process.Start("https://github.com/AlexPi314/PanoramaViewer");
         }
     }
